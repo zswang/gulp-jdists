@@ -29,6 +29,13 @@ var PluginError = require('gulp-util/lib/PluginError');
 
 var pluginName = 'gulp-jdists';
 
+/**
+ * 创建异常对象
+ *
+ * @param {GulpFile} file 当前文件对象
+ * @param {string} err 异常信息
+ * @return {PluginError} 返回异常对象
+ */
 function createError(file, err) {
   return new PluginError(pluginName, file.path + ': ' + err, {
     fileName: file.path,
@@ -36,6 +43,12 @@ function createError(file, err) {
   });
 }
 
+/**
+ * 处理 jdists 任务
+ *
+ * @param {Object} options 配置项
+ * @return {Object} 返回 gulp 任务处理器对象
+ */
 function gulpJdists(options) {
   options = options || {};
   return through.obj(function (file, enc, callback) {
@@ -45,7 +58,6 @@ function gulpJdists(options) {
 
     if (file.isBuffer()) {
       var contents = jdists.build(file.contents, {
-        clean: options.clean,
         remove: options.remove,
         trigger: options.trigger,
         config: options.config,
