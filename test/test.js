@@ -40,10 +40,7 @@ describe('gulp-jdists', function () {
 
   describe('jfogs encoding', function () {
     var input = '(*<jdists encoding="jfogs">function hello() { console.log("hello"); }</jdists>*)';
-    var output = '\n' +
-      '(function ($fog$0, $fog$1) {\n' +
-      '  function hello() { console[$fog$0]($fog$1); }\n' +
-      '})("log", "hello");\n';
+    var output = '\n(function ($fog$2, $fog$0, $fog$1) {\nif ("‮" !== $fog$2) {\n  return;\n}\n  function hello() { console[$fog$0]($fog$1); }\n})("‮", "log", "hello");\n';
 
     it('does nothing', function (done) {
       expect_equals({}, input, output, done);
