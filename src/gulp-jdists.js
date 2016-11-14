@@ -61,6 +61,7 @@ function gulpJdists(options) {
         remove: options.remove,
         trigger: options.trigger,
         config: options.config,
+        clean: options.clean,
         fromString: true,
         path: file.path
       });
