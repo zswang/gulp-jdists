@@ -22,10 +22,11 @@
   },
   "homepage": "https://github.com/zswang/gulp-jdists",
   "devDependencies": {
-    "mocha": "2.0.1",
     "istanbul": "0.3.17",
-    "should": "4.1.0",
-    "jshint": "2.8.0"
+    "jfogs": "0.0.15",
+    "jshint": "2.8.0",
+    "mocha": "2.0.1",
+    "should": "4.1.0"
   },
   "dependencies": {
     "gulp-util": "^3.0.6",
