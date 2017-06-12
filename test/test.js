@@ -47,6 +47,13 @@ describe('gulp-jdists', function () {
     });
   });
 
+  describe('fixtures', function () {
+    it('hello.js', function (done) {
+      var output = 'function hello(name) {\n  console.log("Hello " + (name) + "");\n}\nhello(\'ok\');';
+      expect_equals({}, String(fs.readFileSync('test/fixtures/hello.js')), output, done);
+    });
+  });
+
   describe('Streaming not supported', function () {
     it('does nothing', function (done) {
       var file = new gutil.File({

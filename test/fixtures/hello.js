@@ -1,5 +1,6 @@
-/*<jdists encoding="uglify,jfogs">*/
+/*<jdists encoding="templatestrings">*/
 function hello(name) {
-  console.log('Hello %s', name);
+  console.log(`Hello ${name}`);
 }
+hello('ok');
 /*</jdists>*/
