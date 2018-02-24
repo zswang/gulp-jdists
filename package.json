@@ -1,6 +1,6 @@
 {
   "name": "gulp-jdists",
-  "version": "2.0.17",
+  "version": "2.2.0",
   "description": "Code block processing tools",
   "main": "index.js",
   "repository": {
@@ -30,9 +30,9 @@
     "uglify-js": "^3.0.15"
   },
   "dependencies": {
-    "gulp-util": "^3.0.6",
-    "through2": "^2.0.0",
-    "jdists": "^2.0.17"
+    "gulp-util": "^3.0.8",
+    "jdists": "^2.2.0",
+    "through2": "^2.0.0"
   },
   "scripts": {
     "test": "istanbul cover --hook-run-in-context node_modules/mocha/bin/_mocha -- -R spec",
