@@ -1,6 +1,6 @@
 {
   "name": "gulp-jdists",
-  "version": "2.2.0",
+  "version": "2.2.2",
   "description": "Code block processing tools",
   "main": "index.js",
   "repository": {
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "gulp-util": "^3.0.8",
-    "jdists": "^2.2.0",
+    "jdists": "^2.2.2",
     "through2": "^2.0.0"
   },
   "scripts": {
